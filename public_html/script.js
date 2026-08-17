@@ -96,7 +96,7 @@ if (form) {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const input = form.querySelector('input');
+    const input = form.querylector('input');
     if (input) {
       const email = input.value.trim();
       if (email) {
@@ -106,3 +106,25 @@ if (form) {
     }
   });
 }
+
+const stickySections = document.querySelectorAll('.section-frame');
+
+const updateStickyPositions = new ResizeObserver(() => {
+  const viewportHeight = window.innerHeight;
+  
+  stickySections.forEach(section => {
+    const sectionHeight = section.offsetHeight;
+    
+    if (sectionHeight > viewportHeight) {
+      // Ha a szekció magasabb a képernyőnél, negatív top értéket adunk neki
+      // Ezáltal csak akkor fixálódik le, amikor a felhasználó leért az aljára
+      section.style.setProperty('--sticky-top', `-${sectionHeight - viewportHeight}px`);
+    } else {
+      // Ha rövidebb vagy egyenlő, marad a normál 0px (tetején tapad)
+      section.style.setProperty('--sticky-top', '0px');
+    }
+  });
+});
+
+// Figyelő ráakasztása az összes szekcióra
+stickySections.forEach(section => updateStickyPositions.observe(section));

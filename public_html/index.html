@@ -19,6 +19,7 @@
   <body>
     <div class="page-shell">
       <div class="menu-toolbar" aria-hidden="true">
+        <div class="toolbar-logo" aria-hidden="true"></div>
         <button
           class="menu-toggle"
           type="button"
@@ -53,29 +54,29 @@
             muted
             loop
             playsinline
-            poster="/assets/DSCF0410.RAF.webp"
+            poster="./assets/DSCF0410.RAF.webp"
             aria-hidden="true"
           >
-            <source src="/assets/landing_page_main_video/GIF_PÁSZTOR.mp4" type="video/mp4" />
+            <source src="./assets/landing_page_main_video/GIF_PÁSZTOR.mp4" type="video/mp4" />
           </video>
           <!-- <div class="hero__overlay"></div> -->
           <div class="hero__content">
             <h1 class="logo-wordmark" aria-label="Kinext">Kinext.</h1>
-            <p class="hero__subtitle">
-              Growing the future of Central and Eastern European cinema.
-            </p>
+            
           </div>
         </section>
 
         <section class="vision section-frame" id="vision">
           <div class="section-inner">
-            <p class="section-tag">Our vision</p>
             <h2>OUR VISION</h2>
+            <p class="hero__subtitle">
+              GROWING THE FUTURE OF<br>CENTRAL AND EASTERN EUROPEAN CINEMA.
+            </p>
             <p>
               Building a stronger cinematic identity for central and eastern europe.
               We believe Central and Eastern Europe is home to a new generation of
               filmmakers with distinctive voices and stories that deserve to travel
-              beyond the region. Our vision is to connect these emerging talents,
+              beyond the region.<br><br>Our vision is to connect these emerging talents,
               create meaningful creative and professional relationships, and give first
               films the space, support and connections they need to grow. By bringing
               together filmmakers, producers and industry professionals from across the
@@ -91,17 +92,16 @@
           <div class="section-media creative-lab__media" aria-hidden="true"></div>
           <div class="creative-lab__overlay"></div>
           <div class="section-inner creative-lab__content">
-            <p class="section-tag">The Creative Lab</p>
-            <h2>GROWING TOGETHER THE CREATIVE LAB</h2>
+            <h2><span id="creative-lab-heading">GROWING TOGETHER:</span><br>THE CREATIVE LAB</h2>
             <p>
               The Creative Lab is where ideas meet people, perspectives and professional
-              experience. Each year, we bring together emerging filmmakers from across
+              experience.<br><br>Each year, we bring together emerging filmmakers from across
               Central and Eastern Europe and support them through an intensive
               development process, from their first concept to a project ready to enter
               the international film industry. Through script development, creative and
               producer consultations, mentoring, workshops and international connections,
               participants are encouraged to challenge their ideas, strengthen their
-              individual voices and build the creative teams around their projects. The
+              individual voices and build the creative teams around their projects.<br><br>The
               goal is not only to develop better films, but to create lasting
               relationships between the filmmakers shaping the region's future.
             </p>
@@ -109,30 +109,61 @@
         </section>
 
         <section class="residency section-frame" id="residency">
+          <video
+            class="residency__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            aria-hidden="true"
+          >
+            <source src="./assets/backgrounds/hatter-residency-webm.webm" type="video/webm" />
+          </video>
           <div class="section-inner residency__inner">
-            <p class="section-tag">Kickoff Residency</p>
             <h2>CREATIVE LAB'S KICK-OFF RESIDENCY</h2>
             <h3>
               A starting point for collaboration. A first step towards production. A
               place where regional cinema grows together.
             </h3>
-            <p>
-              The Creative Lab begins with an intensive week in Hungary, bringing
-              together the selected filmmakers, international mentors and industry
-              professionals from across the region. It is a space to develop ideas,
-              exchange perspectives and discover the people who can help take each
-              project further. Alongside script consultations, participants work on their
-              directing and visual concepts, explore production and financing
-              opportunities, and connect with potential creative and international
-              collaborators. The week culminates in the Greenlight Session, where
-              filmmakers present their projects to producers, financiers, sales agents,
-              distributors, festivals and other industry professionals. From these
-              presentations, five projects are selected to continue into the next stage
-              of intensive development. Applications open in December 2026! Subscribe to
-              our newsletter to stay up-to-date with announcements, deadlines and more:
-            </p>
+            <div class="residency-cards">
+              <div class="residency-card">
+                <h4>Discovery & Collaboration</h4>
+                <p>
+                  The Creative Lab begins with an intensive week in Hungary, bringing
+                  together the selected filmmakers, international mentors and industry
+                  professionals from across the region. It is a space to develop ideas,
+                  exchange perspectives and discover the people who can help take each
+                  project further.
+                </p>
+              </div>
 
-            <form class="newsletter-form" aria-label="Newsletter subscription form">
+              <div class="residency-card">
+                <h4>Development & Skills</h4>
+                <p>
+                  Alongside script consultations, participants work on their directing and
+                  visual concepts, explore production and financing opportunities, and
+                  connect with potential creative and international collaborators.
+                </p>
+              </div>
+
+              <div class="residency-card">
+                <h4>Presentation & Selection</h4>
+                <p>
+                  The week culminates in the Greenlight Session, where filmmakers present
+                  their projects to producers, financiers, sales agents, distributors,
+                  festivals and other industry professionals. From these presentations, five
+                  projects are selected to continue into the next stage of intensive
+                  development.
+                </p>
+              </div>
+            </div>
+            <h3 id="submit_label">Applications open in December 2026! Subscribe to our
+                  newsletter<br>to stay up-to-date with announcements, deadlines and more:</h3>
+            <form 
+            action="mailto:example@email.com?subject=Kapcsolatfelvétel"
+            method="post"
+            enctype="text/plain"
+            class="newsletter-form" aria-label="Newsletter subscription form">
               <label class="sr-only" for="email">Email address</label>
               <input id="email" type="email" placeholder="Email" aria-label="Email" />
               <button type="submit">Submit</button>
@@ -143,7 +174,6 @@
         <section class="mentors section-frame" id="mentors">
           <div class="section-inner">
             <div class="section-heading-row">
-              <p class="section-tag">Mentors</p>
               <h2>Our international mentors:</h2>
             </div>
 
@@ -202,7 +232,6 @@
         <section class="team section-frame" id="team">
           <div class="section-inner">
             <div class="section-heading-row">
-              <p class="section-tag">The team</p>
               <h2>Our team</h2>
             </div>
 
@@ -234,7 +263,6 @@
 
         <section class="cooperation section-frame" id="cooperation">
           <div class="section-inner cooperation__inner">
-            <p class="section-tag">Cooperation</p>
             <h2>INTERESTED IN COOPERATION?</h2>
             <p>
               We are looking for partners, institutions and industry professionals who
