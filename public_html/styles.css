@@ -63,6 +63,29 @@ különben a position: sticky nem fog működni!
   position: relative;
   overflow: clip; 
 }
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
 
 /* 
 STAKCED SECTIONS LOGIKA
@@ -164,22 +187,24 @@ p {
 
 .toolbar-logo {
   position: absolute;
-  right: -85%;
+  right: -35%;
   top: 50%;
-  width: 8.2rem;
-  height: 15.5rem;
+  font-size: 1.5rem;
+  color: white !important;
   transform: translateY(-50%) rotate(-90deg);
-  background-image: url('./assets/menu_toolbar/kinext.feher.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   pointer-events: none;
 }
-
+.google-sans-700 {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
 .menu-toggle {
   position: absolute;
   top: 1.2rem;
-  left: 0.75rem; /* Hogy középen legyen a 3.2rem-es sávban */
+  left: 1rem; /* Hogy középen legyen a 3.2rem-es sávban */
   z-index: 50;
   width: 2.2rem;
   height: 1rem;
@@ -403,6 +428,7 @@ body.hero-visible .logo-wordmark {
 .residency {
   position: relative;
   overflow: hidden;
+  --sticky-top: 0 !important;
 }
 
 .residency__video {
@@ -455,7 +481,10 @@ body.hero-visible .logo-wordmark {
   background: rgba(255, 255, 255, 0.04);
   transform: translateY(-2px);
 }
-
+.team-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
+}
 .residency-card h4 {
   font-size: clamp(1rem, 1.1vw, 1.3rem);
   text-transform: uppercase;
@@ -500,11 +529,20 @@ body.hero-visible .logo-wordmark {
   background: transparent;
   color: var(--kinext-off-white);
   padding: 0.9rem 1.25rem;
+  padding-bottom: 0.5rem !important;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: background 0.2s ease, transform 0.2s ease;
 }
-
+.phone-number {
+  border: 1px solid var(--kinext-teal-light);
+  background: transparent;
+  color: var(--kinext-off-white);
+  padding: -0rem 1.25rem;
+  padding-bottom: 0rem !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .newsletter-form button:hover,
 .newsletter-form button:focus-visible,
 .button-link:hover,
@@ -558,7 +596,7 @@ body.hero-visible .logo-wordmark {
   gap: 0;
   border: 1px solid var(--panel-line);
   background: rgba(255, 255, 255, 0.02);
-  min-height: 20rem;
+  min-height: 10rem;
   overflow: hidden;
 }
 
@@ -569,14 +607,32 @@ body.hero-visible .logo-wordmark {
   object-fit: cover;
   filter: saturate(0.9) contrast(1.05);
 }
+.team-info-name h3, .team-info-title p {
+  margin: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.team-info-name {
+  padding-top: 1rem;
+}
+.team-info-title {
+  padding-bottom: 1rem;
+  justify-content: flex-end;
+}
+.team-info-title, .team-info-title {
+  height: 50%;
+}
 
+
+.team
 .mentor-card__info,
 .team-card__info {
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background: rgba(0, 0, 0, 0.22);
+  min-height: 11rem;
+  max-height: 11rem;
 }
 
 .mentor-card__info h3,
@@ -614,23 +670,29 @@ body.hero-visible .logo-wordmark {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .team-card {
   grid-template-columns: 1fr;
   min-height: auto;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
-
+.team.section-frame{
+  min-height: 100vh;
+}
 .team-card img {
   aspect-ratio: 4 / 4.65;
 }
 
 .cooperation__inner {
   max-width: 60rem;
+  padding-bottom: 1.5rem;
 }
-
+#cooperation {
+  background-color: #96c1c5;
+}
 .button-link {
   display: inline-flex;
   align-items: center;
