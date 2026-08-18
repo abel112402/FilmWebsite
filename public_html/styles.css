@@ -642,6 +642,26 @@ body.hero-visible .logo-wordmark {
   margin-bottom: 0.75rem;
 }
 
+#copyright-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#copyright-text {
+  font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+}
+#footer-logo-div{
+
+}
+#footer-img{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 6rem;
+  aspect-ratio: 1/1;
+}
+
 .mentor-card__info p,
 .team-card__info p {
   margin: 0;
